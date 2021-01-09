@@ -1,0 +1,42 @@
+{
+  "name": "portfolio2021",
+  "version": "1.0.0",
+  "description": "This is my new portfolio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qkiczw/portfolio2021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qkiczw/portfolio2021/issues"
+  },
+  "homepage": "https://github.com/qkiczw/portfolio2021#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-custom-dist-structure": "^1.1.16",
+    "sass": "^1.32.2"
+  },
+  "customDistStructure": {
+    "config": {
+    ".js": "js",
+    ".css": "css",
+    "images": [
+      ".jpg",
+      ".png"
+    ],
+    ".fileExtension": "folder/in/dist",
+    "folder/in/dist": [ ".file", ".extensions" ]
+    },
+    "options": {
+      "development": true
+    }
+  }
+}

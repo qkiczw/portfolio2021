@@ -1,3 +1,14 @@
+// font import
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+
+// Variables
+$bgColor : #231f20;
+$fontColorPrimary: #ffffff;
+$fontColorSecondary: #ad974f;
+
+// Mixins
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,5 +16,11 @@
 }
 
 body {
-    background-color: brown;
+    background-color: $bgColor;
+    font-family: 'Montserrat', sans-serif;
+    color: $fontColorPrimary;
+}
+
+.my-logo {
+    width: 100px;
 }

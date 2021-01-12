@@ -10,7 +10,6 @@ const heroArrowDown = document.querySelector('.header__arrow');
 const headerMenuIcon = document.querySelector('.header__menu-icon');
 const sectionsTitles = document.querySelectorAll('.section-title');
 const devIcons = document.querySelectorAll('.dev__icons__icon');
-console.log(devIcons);
 
 const screenWidth = window.innerWidth;
 

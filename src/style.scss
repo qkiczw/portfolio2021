@@ -37,6 +37,9 @@ body {
     font-size: 1.6rem;
     color: $fontColorPrimary;
 }
+a {
+    text-decoration: none;
+}
 .container {
     width: 100%;
     @media screen and (min-width: $smallMobiles) {
@@ -125,11 +128,17 @@ body {
 
     
 }
+section {
+    @media screen and (min-width: $smallMobiles) {
+        padding-top: 50px;
+    }
+}
 .section-title {
     @include centerElement;
 
+
     @media screen and (min-width: $smallMobiles) {
-        margin: 50px 0;
+        margin-bottom: 50px;
         font-weight: 400;
         &__left-bar,
         &__right-bar {

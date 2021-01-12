@@ -99,7 +99,8 @@ body {
         }
     }
     &__button {
-        width: 80%;
+        @include centerElement;
+        width: 95%;
         height: 50px;
         margin-top: 50px;
         background: none;

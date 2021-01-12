@@ -10,28 +10,37 @@
     </head>
     <body>
         <div class="container">
-            <header class="header">
-                <nav class="header__nav">
-                    <div class="header__brand">
-                        <img class="header__logo" src="../src/images/logo-big.png" alt="logo">
+            <section id="header">
+                <header class="header">
+                    <nav class="header__nav">
+                        <div class="header__brand">
+                            <img class="header__logo" src="../src/images/logo-big.png" alt="logo">
+                        </div>
+                        <div class="header__menu-icon">|M|</div>
+                        <div class="header__menu">
+                            <ul>
+                                <li class="header__menu-element"><a href="#start">start</a></li>
+                                <li class="header__menu-element"><a href="#about-me">o mnie</a></li>
+                                <li class="header__menu-element"><a href="#projects">projekty</a></li>
+                                <li class="header__menu-element"><a href="#contact">kontakt</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="header__hero">
+                        <h1 class="header__hero-title" ><span>Hello</span> World!</h1>
+                        <p class="header__hero-subtitle">I`m a Junior Front-End Developer and I want to show You some of my projects</p>
+                        <button class="header__button">please, step into my World</button>
                     </div>
-                    <div class="header__menu-icon">|M|</div>
-                    <div class="header__menu">
-                        <ul>
-                            <li class="header__menu-element"><a href="#start">start</a></li>
-                            <li class="header__menu-element"><a href="#about-me">o mnie</a></li>
-                            <li class="header__menu-element"><a href="#projects">projekty</a></li>
-                            <li class="header__menu-element"><a href="#contact">kontakt</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="header__hero">
-                    <h1 class="header__hero-title" ><span>Hello</span> World!</h1>
-                    <h2 class="header__hero-subtitle">I`m a Junior Front-End Developer and I want to show You some of my projects</h2>
-                    <button class="header__button">please, step into my World</button>
-                </div>
-                
-            </header>
+                </header>
+            </section>
+            <section id="about-me">
+                <h2 class="section-title">
+                    <span class="section-title__left-bar">--</span>
+                    <span><</span><span>About Me</span><span>/</span><span>></span>
+                    <span class="section-title__right-bar">--</span>
+
+                </h2>
+            </section>
         </div>
             
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>

@@ -111,3 +111,30 @@ body {
 
     
 }
+.section-title {
+    @include centerElement;
+
+    @media screen and (min-width: $smallMobiles) {
+        margin-bottom: 50px;
+        font-weight: 400;
+        &__left-bar,
+        &__right-bar {
+            background-color: $fontColorPrimary;
+            width: 17%;
+            height: 1px;
+            margin: 0 10px;
+        }
+        &__arrow-bracket-left,
+        &__arrow-bracket-right {
+            color: $fontColorSecondary;
+        }
+        &__slash{
+            color: $fontColorSecondary;
+        }
+        &__title {
+            color: $fontColorSecondary;
+            margin: 0 1px;
+        }
+
+    }
+}

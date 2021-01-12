@@ -108,6 +108,19 @@ body {
         text-transform: uppercase;
         font-weight: 100;
     }
+    &__arrow {
+        margin-top: 20px;
+        font-size: 5rem;
+        animation-name: movingArrow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+    }
+
+    @keyframes movingArrow {
+        50% {transform: translateY(10px);}
+        100% {transform: translateY(0);}
+      }
 
     
 }
@@ -115,7 +128,7 @@ body {
     @include centerElement;
 
     @media screen and (min-width: $smallMobiles) {
-        margin-bottom: 50px;
+        margin: 50px 0;
         font-weight: 400;
         &__left-bar,
         &__right-bar {

@@ -138,3 +138,14 @@ body {
 
     }
 }
+.about-me {
+    @media screen and (min-width: $smallMobiles) {
+        @include centerElement;
+        flex-direction: column;
+        width: 100%;
+        &__col--left {
+            display: none;
+        }
+    }
+
+}

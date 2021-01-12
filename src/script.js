@@ -6,6 +6,8 @@ const heroTitle = document.querySelector('.header__hero-title');
 const heroSubTitle = document.querySelector('.header__hero-subtitle');
 const heroButton = document.querySelector('.header__button');
 const headerMenuIcon = document.querySelector('.header__menu-icon');
+const sectionsTitles = document.querySelectorAll('.section-title');
+console.log(sectionsTitles);
 
 const screenWidth = window.innerWidth;
 

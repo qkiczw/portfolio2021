@@ -1,4 +1,5 @@
 console.log('Hello World!');
+gsap.registerPlugin(ScrollTrigger);
 
 // GSAP vabiables
 const headerLogo = document.querySelector('.header__logo');
@@ -7,14 +8,15 @@ const heroSubTitle = document.querySelector('.header__hero-subtitle');
 const heroButton = document.querySelector('.header__button');
 const headerMenuIcon = document.querySelector('.header__menu-icon');
 const sectionsTitles = document.querySelectorAll('.section-title');
-console.log(sectionsTitles);
+const devIcons = document.querySelectorAll('.dev__icons__icon');
+console.log(devIcons);
 
 const screenWidth = window.innerWidth;
 
 // GSAP timeline
 let tl = gsap.timeline();
 
-if(screenWidth <= 320) {
+if(screenWidth >= 320) {
     // Header animation
     tl.fromTo(headerLogo, {x: 45, y: 250, scale: 1.2, opacity:0}, {opacity:1, duration:1, ease: "easeIn"});
     tl.to(headerLogo, {x:0, y:0 , scale:1, duration:1, ease: "easeIn"});
@@ -22,7 +24,33 @@ if(screenWidth <= 320) {
     tl.fromTo( heroSubTitle, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5});
     tl.fromTo( heroButton, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5});
     tl.fromTo( headerMenuIcon, {x: -25, opacity:0}, {x:0, opacity:1, duration: 0.5, ease: "easeIn"});
-    
-    
-}
 
+
+    // Section titles animation
+    sectionsTitles.forEach( section => {
+        gsap.fromTo(
+            section,
+            {y: "+=100", opacity: 0},
+            {y: 0, opacity:1, duration:1, ease: "easeInOut",
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 100%',
+                    markers: true,
+                }
+            }
+        )
+    })   
+    devIcons.forEach( icon => {
+        gsap.fromTo(
+            icon.children,
+            {y: "+=50", opacity: 0},
+            {y: 0, opacity:1, duration:1, ease: "easeInOut",
+                scrollTrigger: {
+                    trigger: icon,
+                    start: 'top 95%',
+                    stagger: 0.2,
+                }
+            }
+        )
+    })
+}

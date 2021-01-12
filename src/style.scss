@@ -146,6 +146,26 @@ body {
         &__col--left {
             display: none;
         }
+        &__technologies {
+            margin-top: 50px;
+            &__title {
+                text-align: center;
+            }
+        }
+        .dev__icons {
+            font-size: 5rem;
+            color: $fontColorSecondary;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            &__icon {
+                @include centerElement;
+                max-width: 25%;
+                margin: 20px;
+            }
+
+        }
     }
 
 }

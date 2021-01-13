@@ -129,6 +129,9 @@ a {
     
 }
 section {
+    &:first-child {
+        padding-top: 0;
+    }
     @media screen and (min-width: $smallMobiles) {
         padding-top: 50px;
     }

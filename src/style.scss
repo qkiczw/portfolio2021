@@ -146,7 +146,7 @@ section {
         &__left-bar,
         &__right-bar {
             background-color: $fontColorPrimary;
-            width: 20%;
+            width: 100%;
             height: 1px;
             margin: 0 3px;
         }
@@ -158,6 +158,7 @@ section {
             color: $fontColorSecondary;
         }
         &__title {
+            width: 100%;
             color: $fontColorSecondary;
             margin: 0 1px;
         }
@@ -179,6 +180,7 @@ section {
             }
         }
         .dev__icons {
+            margin-top: 20px;
             font-size: 5rem;
             color: $fontColorSecondary;
             display: flex;
@@ -188,7 +190,7 @@ section {
             &__icon {
                 @include centerElement;
                 max-width: 25%;
-                margin: 20px;
+                margin: 15px 15px;
             }
 
         }
@@ -277,4 +279,21 @@ section {
         };
     }
 
+}
+.contact {
+    &__container {
+        @media screen and (min-width: $smallMobiles) {
+            width: 100%;
+            @include centerElement;
+            flex-direction: column;
+            
+        }
+    }
+    &__btn {
+        margin: 20px 0;
+        padding: 10px 20px;
+        color: $fontColorPrimary;
+        background-color: $fontColorSecondary;
+        border: 1px solid $fontColorPrimary;
+    }
 }

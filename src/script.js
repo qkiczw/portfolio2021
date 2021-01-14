@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 const headerLogo = document.querySelector('.header__logo');
 const mobileMenuBtn = document.querySelector('.hamburger');
 const menu = document.querySelector('.header__menu');
+const menuElements = document.querySelectorAll('.header__menu-element');
 const heroTitle = document.querySelector('.header__hero-title');
 const heroSubTitle = document.querySelector('.header__hero-subtitle');
 const heroButton = document.querySelector('.header__button');
@@ -64,7 +65,7 @@ if(screenWidth >= 320) {
 let showMenu = () => {
     menu.classList.toggle('header__menu--shown');
     setTimeout(function(){
-        let menuElements = document.querySelectorAll('.header__menu-element');
+        // let menuElements = document.querySelectorAll('.header__menu-element');
         gsap.to(
             menuElements,
             {x: 0,opacity: 1, stagger: 0.2}
@@ -72,4 +73,10 @@ let showMenu = () => {
     }, 1000)
 }
 
+let closeAfterPick = () => {
+    menu.classList.remove('header__menu--shown');
+}
 mobileMenuBtn.addEventListener('click', showMenu);
+menuElements.forEach(el => {
+    el.addEventListener('click', closeAfterPick);
+});

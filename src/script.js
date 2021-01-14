@@ -40,7 +40,9 @@ if(screenWidth >= 320) {
                 }
             }
         )
-    })   
+    }) 
+    
+    // Dev icons animation
     devIcons.forEach( icon => {
         gsap.fromTo(
             icon.children,
@@ -54,4 +56,6 @@ if(screenWidth >= 320) {
             }
         )
     })
+
+
 }

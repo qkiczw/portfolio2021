@@ -43,7 +43,7 @@ a {
 .container {
     width: 100%;
     @media screen and (min-width: $smallMobiles) {
-        padding: 0 10px;
+        padding: 0 20px;
     }
     
 }
@@ -103,7 +103,7 @@ a {
     }
     &__button {
         @include centerElement;
-        width: 95%;
+        width: 100%;
         height: 50px;
         margin-top: 50px;
         background: none;
@@ -146,9 +146,9 @@ section {
         &__left-bar,
         &__right-bar {
             background-color: $fontColorPrimary;
-            width: 17%;
+            width: 20%;
             height: 1px;
-            margin: 0 10px;
+            margin: 0 3px;
         }
         &__arrow-bracket-left,
         &__arrow-bracket-right {
@@ -202,7 +202,7 @@ section {
         @include centerElement;
         flex-direction: column;
         .project {
-            width: 90%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             &__name {

@@ -56,7 +56,7 @@ if(screenWidth >= 320) {
             scrollTrigger: {
                 trigger: icon,
                 start: 'top 90%',
-                end: 'top 50%',
+                end: 'top 70%',
                 scrub: 3
             }}
         );
@@ -102,7 +102,7 @@ let showMenu = () => {
             menuElements,
             {x: 0,opacity: 1, stagger: 0.2}
         );
-    }, 1000)
+    }, 500)
 }
 
 let closeMenuAfterPick = () => {

@@ -25,9 +25,9 @@ if(screenWidth >= 320) {
     tl.to(headerLogo, {x:0, y:0 , scale:1, duration:1, ease: "easeIn"});
     tl.fromTo( heroTitle, {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: "easeInOut"});
     tl.fromTo( heroSubTitle, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5});
+    tl.fromTo( headerMenuIcon, {x: -25, opacity:0}, {x:0, opacity:1, duration: 0.5, ease: "easeIn"});
     tl.fromTo( heroButton, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5});
     tl.fromTo( heroArrowDown, {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.5});
-    tl.fromTo( headerMenuIcon, {x: -25, opacity:0}, {x:0, opacity:1, duration: 0.5, ease: "easeIn"});
 
 
     // Section titles animation
@@ -73,10 +73,14 @@ let showMenu = () => {
     }, 1000)
 }
 
-let closeAfterPick = () => {
-    menu.classList.remove('header__menu--shown');
+let closeMenuAfterPick = () => {
+    gsap.to(
+        menuElements,
+        {x: 50, opacity: 0, stagger: 0.2}
+    );
+    setTimeout( () => menu.classList.remove('header__menu--shown'), 500 );
 }
 mobileMenuBtn.addEventListener('click', showMenu);
 menuElements.forEach(el => {
-    el.addEventListener('click', closeAfterPick);
+    el.addEventListener('click', closeMenuAfterPick);
 });

@@ -13,6 +13,8 @@ const heroArrowDown = document.querySelector('.header__arrow');
 const headerMenuIcon = document.querySelector('.header__menu-icon');
 const sectionsTitles = document.querySelectorAll('.section-title');
 const devIcons = document.querySelectorAll('.dev__icons__icon');
+const projects = document.querySelectorAll('.project');
+const otherSmallProjects = document.querySelectorAll('.other-project');
 
 const screenWidth = window.innerWidth;
 
@@ -54,6 +56,36 @@ if(screenWidth >= 320) {
                 scrollTrigger: {
                     trigger: icon,
                     start: 'top 95%',
+                    stagger: 0.2,
+                }
+            }
+        )
+    });
+
+    // Projects animation
+    projects.forEach( project => {
+        gsap.fromTo(
+            project,
+            {y: "+=50", opacity: 0},
+            {y: 0, opacity:1, duration:1, ease: "easeInOut",
+                scrollTrigger: {
+                    trigger: project,
+                    start: 'top 90%',
+                    stagger: 0.2,
+                }
+            }
+        )
+    })
+    
+    // Projects animation
+    otherSmallProjects.forEach( project => {
+        gsap.fromTo(
+            project,
+            {y: "+=50", opacity: 0},
+            {y: 0, opacity:1, duration:1, ease: "easeInOut",
+                scrollTrigger: {
+                    trigger: project,
+                    start: 'top 90%',
                     stagger: 0.2,
                 }
             }

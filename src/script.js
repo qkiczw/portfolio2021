@@ -12,7 +12,7 @@ const heroButton = document.querySelector('.header__button');
 const heroArrowDown = document.querySelector('.header__arrow');
 const headerMenuIcon = document.querySelector('.header__menu-icon');
 const sectionsTitles = document.querySelectorAll('.section-title');
-const devIcons = document.querySelectorAll('.dev__icons__icon');
+const devIcons = document.querySelectorAll('.dev__icons');
 const projects = document.querySelectorAll('.project');
 const otherSmallProjects = document.querySelectorAll('.other-project');
 
@@ -47,20 +47,20 @@ if(screenWidth >= 320) {
         )
     }) 
     
-    // Dev icons animation
     devIcons.forEach( icon => {
-        gsap.fromTo(
+        gsap.to(
             icon.children,
-            {y: "+=50", opacity: 0},
-            {y: 0, opacity:1, duration:1, ease: "easeInOut",
-                scrollTrigger: {
-                    trigger: icon,
-                    start: 'top 95%',
-                    stagger: 0.2,
-                }
-            }
-        )
-    });
+            {y: 0, opacity: 1, 
+            // duration: 0.5, 
+            stagger: 0.2, 
+            scrollTrigger: {
+                trigger: icon,
+                start: 'top 90%',
+                end: 'top 50%',
+                scrub: 3
+            }}
+        );
+    })
 
     // Projects animation
     projects.forEach( project => {

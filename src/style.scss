@@ -230,10 +230,13 @@ section {
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
+            
             &__icon {
                 @include centerElement;
                 max-width: 25%;
                 margin: 15px 15px;
+                transform: translateY(50px);
+                opacity: 0;
             }
 
         }

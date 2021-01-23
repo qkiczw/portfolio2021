@@ -256,6 +256,8 @@ section {
             margin: 25px 0;
             &__name {
                 text-transform: uppercase;
+                display: flex;
+                justify-content: flex-start;
             }
             &__thumbnail {
                 max-width: 100%;
@@ -285,6 +287,37 @@ section {
 
         }
 
+    }
+    @media screen and (min-width: $hdScreens) {
+        @include centerElement;
+        flex-direction: column;
+        .project {
+            width: 100%;
+            
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(6, 50px);
+            &__name {
+                grid-column: 7/11;
+                grid-row: 1/2;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            &__thumbnail {
+                grid-column: 1/7 ;
+                grid-row: 1/5;
+            }
+            &__description {
+                grid-column: 6/11;
+                grid-row: 2/6;
+            }&__technologies {
+                grid-row: 6/7;
+                grid-column: 7/11;
+            }
+
+        }
+    
     }
 }
 .other-projects__container {

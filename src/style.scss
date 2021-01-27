@@ -308,25 +308,7 @@ section {
             margin-bottom: 50px;
             grid-template-columns: repeat(10, 1fr);
             grid-template-rows: repeat(6, auto);
-            // &__name {
-            //     grid-column: 7/11;
-            //     grid-row: 1/2;
-            //     display: flex;
-            //     justify-content: flex-end;
-            //     align-items: flex-end;
-            // }
-            // &__thumbnail {
-            //     height: auto;
-            //     grid-column: 1/7;
-            //     grid-row: 1/7;
-            // }
-            // &__description {
-            //     grid-column: 6/11;
-            //     grid-row: 2/6;
-            // }&__technologies {
-            //     grid-row: 6/7;
-            //     grid-column: 7/11;
-            // }
+           
         }
         .project__info {
             padding: 15px 20px;
@@ -392,14 +374,23 @@ section {
         }
     }
 }
-.other-projects__container {
-        margin-top: 100px;
-        @include centerElement;
-        flex-direction: column;
-}
+
 .other-projects {
+    @include centerElement;
+    flex-direction: column;
+    margin: 100px 0 50px;
     &__title {
         text-transform: uppercase;
+    }
+    @media screen and (min-width: $hdScreens) {
+        &__container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
     }
 
 }
@@ -430,6 +421,11 @@ section {
             margin: 0 5px;
         };
     }
+    @media screen and (min-width: $hdScreens) {
+        width: 300px;
+        height: 300px;
+        justify-content: space-between;
+    }
 
 }
 .contact {
@@ -437,8 +433,7 @@ section {
         @media screen and (min-width: $smallMobiles) {
             width: 100%;
             @include centerElement;
-            flex-direction: column;
-            
+            flex-direction: column; 
         }
     }
     &__btn {
